@@ -1,0 +1,48 @@
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #726d6d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+footer {
+    padding: 10px;
+    background-color: #9ad31f;
+    color: #000000;
+    text-align: start;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+
+.mainleft {
+    display: grid;
+    background-color: #ff0f0f;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    color: #efecec;
+}
+
+.mainright {
+    background-color: #4fa807;
+    gap: 20px;
+    padding: 20px;
+    color: #faf9f9;
+}
+
+.divs {
+    background-color: #eb8c74;
+    padding-left: 20px;
+}
+
+
