@@ -1,8 +1,118 @@
 body {
-    background-color: #cc3737;
+    background-color: #f1f5f9;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #12314a;
+    color: #fff;
+    padding: 24px;
+}
+
+.apresentacao-cidade {
+    text-align: left;
+}
+
+.apresentacao-cidade h1 {
+    color: #12314a;
+    margin: 24px 16px;
+}
+
+header nav {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+}
+
+header nav a {
+    border-radius: 6px;
+    color: #fff;
+    margin: 0;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: background-color 180ms ease;
+}
+
+header nav a:hover, header nav a:focus-visible {
+    background-color: #254d69;
+    text-decoration: none;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+    margin: 32px auto;
+    max-width: 880px;
+    padding: 32px;
+}
+
+main h2 {
+    color: #0c4a6e;
+    margin-top: 0;
+}
+
+main > img {
+    border-radius: 8px;
+    display: block;
+    height: auto;
+    margin-top: 20px;
+    max-width: 100%;
+    width: 640px;
 }
 
 .descricao {
+    max-width: 100%;
     width: 360px;
 }
 
+iframe {
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 16px 0;
+    max-width: 100%;
+}
+
+th,td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: #174a7e;
+}
+
+td {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header,
+    footer {
+        padding: 20px;
+    }
+
+    main {
+        margin: 20px 16px;
+        padding: 20px;
+    }
+}
