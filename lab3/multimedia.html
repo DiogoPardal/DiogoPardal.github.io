@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multimédia - New York</title>
+    <style>
+      .fotografias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 520px; }
+
+      .fotografias img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border: 2px solid #333; }
+
+      .poema p:nth-child(odd) {
+        color: #174a7e;
+      }
+      .poema p:nth-child(even) {
+        color: #9b2c2c;
+        margin-left: 24px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <nav><a href="index.html">Home</a> <a href="local.html">Localização</a> <a href="multimedia.html">Multimédia</a> <a href="info.html">Informação</a></nav>
+    </header>
+
+    <section class="apresentacao-cidade">
+      <h1>A minha cidade é New York!</h1>
+    </section>
+
+    <main>
+
+      <h2>Multimédia</h2>
+      <p>Conheça alguns lugares e referências de New York.</p>
+      <nav aria-label="Secções da página"><a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> | <a href="#poesia">Poesia</a></nav>
+
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="images/centralparque.webp" alt="Vista aérea do Central Park, em Manhattan">
+          <img src="images/estatua-liberdade.webp" alt="Estátua da Liberdade com o horizonte de Manhattan">
+          <img src="images/ilha.webp" alt="Vista aérea da ilha de Manhattan rodeada pelo rio">
+          <img src="images/times-square.webp" alt="Times Square iluminada à noite">
+          <img src="images/brooklyn-bridge.webp" alt="Ponte de Brooklyn sobre o East River">
+          <img src="images/grand-central.webp" alt="Interior da Grand Central Terminal">
+          <img src="images/empire-state.webp" alt="Empire State Building ao pôr do sol">
+          <img src="images/one-world-trade-center.webp" alt="One World Trade Center ao pôr do sol">
+        </div>
+      </section>
+
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/MtCMtC50gwY" title="Vídeo sobre New York" allowfullscreen></iframe>
+      </section>
+
+      <section>
+        <h3 id="poesia">Poesia</h3>
+        <div class="poema">
+          <p>Entre luzes, pontes e arranha-céus,</p>
+          <p>New York desperta junto ao rio.</p>
+          <p>Cada rua guarda mil histórias,</p>
+          <p>e a cidade nunca perde o brilho.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer><p>DIW 2026</p></footer>
+
+  </body>
+</html>

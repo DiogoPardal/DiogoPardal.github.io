@@ -1,52 +1,111 @@
 <!doctype html>
 <html lang="pt">
+
   <head>
     <meta charset="utf-8" />
-    <title>Primeira Página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portefólio | Desenvolvimento de Interfaces Web</title>
   </head>
 
   <body>
-    <header>
-      <h1>Primeira Página Web!</h1>
-      <nav aria-label="Laboratórios">
-        <a href="lab1/index.html">Lab 1</a>
-        <a href="lab2/index.html">Lab 2</a>
-      </nav>
-    </header>
-
     <main>
-      <h2>Laboratórios</h2>
+      <section class="secao hero" id="inicio" aria-labelledby="titulo-inicio">
+        <nav class="menu-principal" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#disciplina">Interfaces Web</a></li>
+          </ul>
+        </nav>
 
-      <p>Eis a minha primeira página Web!</p>
+        <div class="hero-conteudo">
+          <p class="etiqueta">Portefólio académico</p>
+          <h1 id="titulo-inicio">Aprender, criar <br> e explorar.</h1>
+          <p>Um percurso pelos projetos desenvolvidos em Desenvolvimento de Interfaces Web.</p>
+          <a class="botao" href="#projetos">Explorar projetos</a>
+        </div>
+      </section>
 
-      <p>
-        Na Unidade Curricular de
-        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank">
-          Desenvolvimento de Interfacess Web
-        </a>
-        abordaremos as seguintes tecnologias Web &#127760;:
-      </p>
+      <section class="secao projetos" id="projetos" aria-labelledby="titulo-projetos">
 
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
+        <div class="projetos-conteudo">
 
-      <p>Iremos criar soluções criativas!</p>
+          <p class="etiqueta">Trabalho desenvolvido</p>
+          <h2 id="titulo-projetos">Projetos e laboratórios</h2>
+          <p>Explora os sites e exercícios que fui criando ao longo da disciplina.</p>
 
-      <img
-        src="images/diw.svg"
-        alt="Desenvolvimento de Interfaces Web"
-        style="width: 300px"
-      />
+          <div class="cartoes-projetos">
+
+            <a class="cartao-projeto" href="lab1/index.html">
+              <h3>Laboratório 1</h3>
+              <p>Primeira versão do projeto sobre a cidade de New York.</p>
+              <span class="ligacao-projeto">Ver projeto 
+                <span aria-hidden="true"> ➜ </span>
+              </span>
+            </a>
+
+            <a class="cartao-projeto" href="lab2/index.html">
+              <h3>Laboratório 2</h3>
+              <p>Projeto de cidade com localização, multimédia e informação.</p>
+              <span class="ligacao-projeto">Ver projeto 
+                <span aria-hidden="true"> ➜ </span>
+              </span>
+            </a>
+
+            <a class="cartao-projeto" href="lab3/index.html">
+              <h3>Laboratório 3</h3>
+              <p>Continuação dos exercícios e páginas de New York.</p>
+              <span class="ligacao-projeto">Ver projeto 
+                <span aria-hidden="true"> ➜ </span></span>
+            </a>
+            
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="secao disciplina" id="disciplina" aria-labelledby="titulo-disciplina">
+
+        <div class="disciplina-conteudo">
+
+          <div class="texto-disciplina">
+
+            <p class="etiqueta">O que estou a aprender</p>
+            <h2 id="titulo-disciplina">Desenvolvimento de Interfaces Web</h2>
+
+            <p>
+              Na unidade curricular de
+              <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank" rel="noopener noreferrer">Desenvolvimento de Interfaces Web</a>
+              exploramos tecnologias para criar páginas e experiências na Web.
+            </p>
+
+            <ul class="tecnologias">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React e Next.js</li>
+            </ul>
+
+            <p>Iremos criar soluções criativas!</p>
+
+          </div>
+
+          <img
+            class="nuvem-palavras"
+            src="images/diw.svg"
+            alt="Nuvem de palavras com conceitos de desenvolvimento de interfaces web"
+            loading="lazy"
+          />
+        </div>
+
+        <footer>
+          <p>Universidade Lusófona · DIW 2026</p>
+        </footer>
+
+      </section>
 
     </main>
-
-    <footer>
-      <p>Universidade Lusófona © 2025</p>
-    </footer>
-
   </body>
 </html>
