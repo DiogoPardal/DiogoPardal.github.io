@@ -5,28 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Multimédia - New York</title>
-    <style>
-      .fotografias {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        max-width: 520px; }
-
-      .fotografias img {
-        width: 120px;
-        height: 80px;
-        object-fit: cover;
-        border: 2px solid #333; }
-
-      .poema p:nth-child(odd) {
-        color: #174a7e;
-      }
-      .poema p:nth-child(even) {
-        color: #9b2c2c;
-        margin-left: 24px;
-      }
-    </style>
   </head>
+
   <body>
 
     <header>
@@ -37,13 +17,15 @@
       <h1>A minha cidade é New York!</h1>
     </section>
 
-    <main>
+    <main class="pagina-multimedia">
 
-      <h2>Multimédia</h2>
-      <p>Conheça alguns lugares e referências de New York.</p>
-      <nav aria-label="Secções da página"><a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> | <a href="#poesia">Poesia</a></nav>
+      <div class="introducao-multimedia">
+        <h2>Multimédia</h2>
+        <p>Conheça alguns lugares e referências de New York.</p>
+        <nav aria-label="Secções da página"><a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> | <a href="#poesia">Poesia</a> | <a href="#destaque">Fotografia em destaque</a> | <a href="#video-fundo">Vídeo de fundo</a> | <a href="#parallax">Parallax</a></nav>
+      </div>
 
-      <section>
+      <section class="secao-multimedia secao-fotografias">
         <h3 id="fotografias">Fotografias</h3>
         <div class="fotografias">
           <img src="images/centralparque.webp" alt="Vista aérea do Central Park, em Manhattan">
@@ -57,18 +39,46 @@
         </div>
       </section>
 
-      <section>
+      <section class="secao-multimedia secao-video">
         <h3 id="video">Vídeo</h3>
-        <iframe width="400" height="225" src="https://www.youtube.com/embed/MtCMtC50gwY" title="Vídeo sobre New York" allowfullscreen></iframe>
+        <iframe width="960" height="540" src="https://www.youtube.com/embed/MtCMtC50gwY" title="Vídeo sobre New York" allowfullscreen></iframe>
       </section>
 
-      <section>
+      <section class="secao-multimedia secao-poesia">
         <h3 id="poesia">Poesia</h3>
         <div class="poema">
           <p>Entre luzes, pontes e arranha-céus,</p>
           <p>New York desperta junto ao rio.</p>
           <p>Cada rua guarda mil histórias,</p>
           <p>e a cidade nunca perde o brilho.</p>
+        </div>
+      </section>
+
+      <section class="secao-fotografia-destaque" id="destaque" aria-labelledby="titulo-destaque">
+        <figure class="destaque-imagem">
+          <img src="https://cdn.pixabay.com/photo/2019/10/27/18/48/skyline-4582510_1280.jpg" alt="Vista panorâmica dos edifícios de New York junto ao rio">
+          <figcaption>
+            <h3 id="titulo-destaque">New York,<br>a cidade que nunca dorme.</h3>
+            <p>Fotografia de noelsch / Pixabay</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="secao-video-fundo" id="video-fundo" aria-labelledby="titulo-video-fundo">
+        <video class="video-fundo" autoplay muted loop playsinline preload="metadata" poster="https://cdn.pixabay.com/video/2015/08/08/125-135736646_large.jpg" aria-hidden="true" tabindex="-1">
+          <source src="https://cdn.pixabay.com/video/2015/08/08/125-135736646_large.mp4" type="video/mp4">
+        </video>
+        <div class="conteudo-video-fundo">
+          <h3 id="titulo-video-fundo">Um instante de calma</h3>
+          <p>Flores amarelas ao sol, num vídeo do Pixabay.</p>
+          <a href="https://pixabay.com/videos/id-125/" target="_blank" rel="noreferrer">Ver vídeo no Pixabay</a>
+        </div>
+      </section>
+
+      <section class="secao-parallax" id="parallax" aria-labelledby="titulo-parallax">
+        <div class="conteudo-parallax">
+          <h3 id="titulo-parallax">New York em perspetiva</h3>
+          <p>À medida que percorremos a página, o horizonte parece ficar suspenso.</p>
         </div>
       </section>
 
