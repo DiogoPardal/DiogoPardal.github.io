@@ -179,8 +179,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
-    min-height: 0;
     padding-bottom: 5vh;
 }
 
@@ -301,4 +299,3 @@ a:focus-visible {
         padding: 16px;
     }
 }
-
