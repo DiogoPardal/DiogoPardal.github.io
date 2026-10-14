@@ -1,0 +1,265 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #12314a;
+    color: #fff;
+    padding: 24px;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.titulo-cidade {
+    color: #fff;
+    flex: 0 0 auto;
+    font-size: clamp(1.05rem, 1.8vw, 1.5rem);
+    margin: 0;
+    text-align: right;
+}
+
+header nav {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+    width: auto;
+}
+
+header nav a {
+    border-radius: 6px;
+    color: #fff;
+    margin: 0;
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: background-color 180ms ease;
+}
+
+header nav a:hover, header nav a:focus-visible {
+    background-color: #254d69;
+    text-decoration: none;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+    margin: 32px auto;
+    max-width: 880px;
+    padding: 32px;
+    flex: 1;
+}
+
+main h2 {
+    color: #0c4a6e;
+    margin-top: 0;
+}
+
+main > img {
+    border-radius: 8px;
+    display: block;
+    height: auto;
+    margin-top: 20px;
+    max-width: 100%;
+    width: 640px;
+}
+
+.descricao {
+    max-width: 100%;
+    width: 360px;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 16px 0;
+    max-width: 100%;
+}
+
+th,td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: #174a7e;
+}
+
+td {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    header,
+    footer {
+        padding: 20px;
+    }
+
+    header {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    .titulo-cidade {
+        text-align: right;
+    }
+
+    main {
+        margin: 20px 16px;
+        padding: 20px;
+    }
+}
+
+/* Regras dos cartões e eventos específicos do Lab4 */
+.experiencia {
+    border: 1px solid #dbe4eb;
+    border-radius: 8px;
+    margin-top: 24px;
+    padding: 24px;
+}
+
+.contador {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contador > div {
+    flex: 1 1 260px;
+}
+
+.contador h3,
+.cidade h3,
+.convite h3 {
+    color: #0c4a6e;
+    margin-top: 0;
+}
+
+.contador p,
+.convite p {
+    margin-bottom: 0;
+}
+
+button {
+    background-color: #12314a;
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    padding: 8px 12px;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: #254d69;
+}
+
+#valor-contador {
+    color: #0c4a6e;
+    font-size: 2rem;
+    font-weight: 700;
+    min-width: 32px;
+    text-align: center;
+}
+
+.cidade {
+    align-items: center;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1.2fr;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.cidade p {
+    margin-bottom: 18px;
+}
+
+.cidade figure {
+    margin: 0;
+}
+
+.cidade img {
+    border-radius: 8px;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    transition: filter 180ms ease, transform 180ms ease;
+    width: 100%;
+}
+
+.cidade figcaption {
+    color: #536273;
+    font-size: .9rem;
+    margin-top: 8px;
+}
+
+.convite {
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.convite.aceso {
+    background-color: #dbeafe;
+}
+
+@media (max-width: 600px) {
+    .cidade {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.botao-voltar-projetos {
+    align-items: center;
+    background-color: #254d69;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-flex;
+    flex: 0 0 40px;
+    font-size: 1.5rem;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    min-width: 40px;
+    padding: 0;
+    text-decoration: none;
+    width: 40px;
+}
+
+.botao-voltar-projetos:hover, .botao-voltar-projetos:focus-visible {
+    background-color: #0c6680;
+}

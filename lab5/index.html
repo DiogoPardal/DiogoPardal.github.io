@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Laboratório 5 | Eventos JavaScript</title>
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegação">
+            <a class="botao-voltar-projetos" href="../index.html#projetos" aria-label="Voltar aos laboratórios" onclick="history.back(); return false;">←</a>
+        </nav>
+        <h1 class="titulo-cidade">Eventos JavaScript</h1>
+    </header>
+
+    <main>
+        <section class="exercicio" aria-labelledby="titulo-passar">
+            <h2 id="titulo-passar">1. Passa por aqui!</h2>
+        </section>
+
+        <section class="exercicio" aria-labelledby="titulo-pintar">
+            <h2 id="titulo-pintar">2. Escolhe uma cor!</h2>
+            <div class="botoes-cores">
+                <button class="color" data-color="orange" type="button">Orange</button>
+                <button class="color" data-color="purple" type="button">Purple</button>
+                <button class="color" data-color="black" type="button">Black</button>
+            </div>
+        </section>
+
+        <section class="exercicio" aria-labelledby="titulo-escrever">
+            <h2 id="titulo-escrever">3. Experimenta escrever...</h2>
+            <input id="campo-escrever" class="campo-escrever" type="text" aria-label="Escreve para mudar a cor do campo" autocomplete="off">
+            <p class="explicacao">A cada tecla, a cor do campo muda. As quatro cores são percorridas por ordem e, ao chegar ao fim, a sequência recomeça.</p>
+        </section>
+
+        <section class="exercicio" aria-labelledby="titulo-fundo">
+            <h2 id="titulo-fundo">4. Escolha uma cor:</h2>
+            <label class="visualmente-oculto" for="campo-cor">Cor de fundo</label>
+            <select id="campo-cor" name="cor">
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+        </section>
+
+        <section class="exercicio contador" aria-labelledby="titulo-contador">
+            <h2 id="titulo-contador">5.</h2>
+            <button id="botao-incrementar" type="button">Incrementar</button>
+            <button id="botao-decrementar" type="button">Decrementar</button>
+            <button id="botao-reset" type="button">Reset</button>
+            <output id="valor-contador" aria-live="polite">0</output>
+        </section>
+
+        <section class="exercicio" aria-labelledby="titulo-identificacao">
+            <h2 id="titulo-identificacao">6.<span class="visualmente-oculto"> Identificação</span></h2>
+            <form id="formulario-identificacao">
+                <label class="visualmente-oculto" for="campo-nome">Nome</label>
+                <input id="campo-nome" name="nome" type="text" placeholder="Insira o seu nome" required>
+                <label class="visualmente-oculto" for="campo-idade">Idade</label>
+                <input id="campo-idade" name="idade" type="number" min="0" placeholder="Insira a sua idade" required>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="mensagem-identificacao" aria-live="polite"></p>
+        </section>
+
+        <section class="exercicio" aria-labelledby="titulo-automatico">
+            <h2 id="titulo-automatico">7. Automatic Counter: <output id="valor-automatico" aria-live="off">0</output></h2>
+        </section>
+
+        <section class="exercicio exercicio-flex" aria-labelledby="titulo-flex">
+            <h2 id="titulo-flex">8. Select flex</h2>
+            <label for="seletor-flex">Direção dos círculos:</label>
+            <select id="seletor-flex">
+                <option value="row">row</option>
+                <option value="row-reverse">row-reverse</option>
+                <option value="column">column</option>
+                <option value="column-reverse">column-reverse</option>
+            </select>
+            <div id="flex-container" aria-label="Quatro círculos organizados com flex">
+                <span class="bola"></span>
+                <span class="bola"></span>
+                <span class="bola"></span>
+                <span class="bola"></span>
+            </div>
+            <p>A propriedade alterada é <code>flex-direction</code>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

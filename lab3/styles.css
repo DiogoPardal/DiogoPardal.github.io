@@ -1,4 +1,7 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #f1f5f9;
     color: #1f2937;
     font-family: Arial, Helvetica, sans-serif;
@@ -58,6 +61,7 @@ main {
     margin: 32px auto;
     max-width: 880px;
     padding: 32px;
+    flex: 1;
 }
 
 main h2 {
@@ -559,4 +563,27 @@ footer p {
         grid-template-columns: minmax(0, 1fr);
         margin: 20px 16px;
     }
+}
+
+.botao-voltar-projetos {
+    align-items: center;
+    background-color: #254d69;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-flex;
+    flex: 0 0 40px;
+    font-size: 1.5rem;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    min-width: 40px;
+    padding: 0;
+    text-decoration: none;
+    width: 40px;
+}
+
+.botao-voltar-projetos:hover, .botao-voltar-projetos:focus-visible {
+    background-color: #0c6680;
 }

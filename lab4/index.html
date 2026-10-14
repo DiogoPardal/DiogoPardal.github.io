@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>JavaScript - New York</title>
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <a class="botao-voltar-projetos" href="../index.html#projetos" aria-label="Voltar aos laboratórios" onclick="history.back(); return false;">←</a>
+            </nav>
+            <h1 class="titulo-cidade">Eventos JavaScript em Nova Iorque</h1>
+        </header>
+
+        <main>
+            <h2>Uma página artilhada com eventos</h2>
+            <p>Explora a página com o rato e vê as alterações nos elementos.</p>
+
+            <section class="experiencia contador" aria-labelledby="titulo-contador">
+                <div>
+                    <h3 id="titulo-contador">Contador de cliques</h3>
+                    <p>Carrega no botão para contar as tuas visitas.</p>
+                </div>
+                <button id="botao-contador" type="button">Contar clique</button>
+                <output id="valor-contador" aria-live="polite">0</output>
+            </section>
+
+            <section class="experiencia cidade" id="destaque" aria-labelledby="titulo-cidade">
+                <div>
+                    <h3 id="titulo-cidade">A cidade que nunca pára</h3>
+                    <p id="mensagem-cidade">Passa o rato pela fotografia e descobre as mensagens.</p>
+                    <button id="botao-cor" type="button">Mudar as cores</button>
+                </div>
+                <figure id="figura-cidade">
+                    <img src="../lab3/images/times-square.webp" alt="Times Square iluminada à noite">
+                    <figcaption id="legenda-foto">Times Square, Nova Iorque</figcaption>
+                </figure>
+            </section>
+
+            <section class="experiencia convite" id="convite" aria-labelledby="titulo-convite">
+                <h3 id="titulo-convite">Duplo clique para iluminar</h3>
+                <p>Passa o rato por este cartão ou faz duplo clique para mudar o seu aspeto.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>DIW 2026</p>
+        </footer>
+
+        <script src="scripts/main.js"></script>
+    </body>
+
+</html>
