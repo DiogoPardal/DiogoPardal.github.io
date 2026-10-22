@@ -11,16 +11,14 @@ body {
     min-height: 100vh;
 }
 
-header,
-footer {
+header, footer {
     background-color: #12314a;
     color: #fff;
     padding: 20px 24px;
     text-align: center;
 }
 
-header h1,
-footer {
+header h1, footer {
     margin: 0;
 }
 
@@ -77,15 +75,4 @@ input[type="submit"] {
 input[type="submit"]:hover,
 input[type="submit"]:focus-visible {
     background-color: #0c6680;
-}
-
-@media (max-width: 600px) {
-    main {
-        margin: 16px auto;
-        padding: 18px;
-    }
-
-    section {
-        padding: 16px;
-    }
 }
