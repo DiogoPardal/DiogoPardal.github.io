@@ -1,39 +1,58 @@
 <!doctype html>
 <html lang="pt-PT">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 7 | Loja Online</title>
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab 7 | Loja Online</title>
+        <link rel="stylesheet" href="../shared.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-<body>
-    <header>
-        <h1>Loja Online</h1>
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#cesto">Cesto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <body>
+        <header>
+            <h1>Loja Online DIW</h1>
 
-    <main>
-        <section id="produtos">
-            <h2>Produtos</h2>
-            <div id="produtos-list"></div>
-        </section>
+            <nav>
+                <ul>
+                    <li><a href="#produtos">Produtos</a></li>
+                </ul>
+            </nav>
 
-        <section id="cesto">
-            <h2>Cesto</h2>
-        </section>
-    </main>
+            <button id="botao-cesto" type="button" aria-expanded="false" aria-controls="painel-cesto" aria-label="Abrir cesto de compras">
+                <span aria-hidden="true">🛒</span>
+                <span>Cesto</span>
+                <span id="quantidade-cesto" aria-live="polite">0</span>
+            </button>
+        </header>
 
-    <footer>2026, ULusófona</footer>
 
-    <script src="produtos.js"></script>
-    <script src="main.js"></script>
-</body>
 
+        <!-- Painel do cesto -->
+        <dialog id="painel-cesto" aria-labelledby="titulo-cesto">
+            <div class="cesto-cabecalho">
+                <h2 id="titulo-cesto">O teu cesto</h2>
+                <button id="botao-fechar-cesto" type="button" aria-label="Fechar cesto">Fechar</button>
+            </div>
+            <div id="produtos-selecionados">
+                <p id="cesto-vazio">O cesto está vazio.</p>
+            </div>
+            <p>Total: <span id="total-cesto">0,00 €</span></p>
+        </dialog>
+
+
+
+        <main>
+            <!-- Lista de produtos -->
+            <section id="produtos">
+                <h2>Produtos</h2>
+                <div id="produtos-list"></div>
+            </section>
+
+        </main>
+
+        <footer>2026, ULusófona</footer>
+
+        <script src="produtos.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>
