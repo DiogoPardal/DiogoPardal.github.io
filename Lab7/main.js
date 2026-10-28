@@ -21,7 +21,7 @@ quantidadeCesto.textContent = produtosSelecionados.length;
 
 const listaCesto = document.querySelector("#produtos-selecionados");
 const mensagemCestoVazio = document.querySelector("#cesto-vazio");
-
+const totalCesto = document.querySelector('#total-cesto');
 
 
 
@@ -32,12 +32,35 @@ const mensagemCestoVazio = document.querySelector("#cesto-vazio");
 function criarProduto(produto) {
     const artigo = document.createElement("article");
 
+    const imagem = document.createElement('img');
+    imagem.src = produto.image;
+    imagem.alt = produto.title;
+    imagem.loading = 'lazy';
+    artigo.appendChild(imagem);
+
     const titulo = document.createElement('h2');
     titulo.textContent = produto.title;
     artigo.appendChild(titulo);
 
+    const avaliacao = document.createElement('p');
+    avaliacao.className = 'avaliacao-produto';
+
+    const estrela = document.createElement('span');
+    estrela.setAttribute('aria-hidden', 'true');
+    estrela.textContent = '★';
+
+    const detalhesAvaliacao = document.createElement('span');
+    detalhesAvaliacao.textContent = `${produto.rating.rate}/5 · ${produto.rating.count} avaliações`;
+
+    avaliacao.append(estrela, detalhesAvaliacao);
+    artigo.appendChild(avaliacao);
+
     const preco = document.createElement('p');
-    preco.textContent = "Preço: " + produto.price;
+    preco.className = 'preco-produto';
+    preco.textContent = Number(produto.price).toLocaleString('pt-PT', {
+        style: 'currency',
+        currency: 'EUR'
+    });
     artigo.appendChild(preco);
 
     const descricao = document.createElement('p');
@@ -91,6 +114,14 @@ function criaProdutoCesto(produto) {
 
 function atualizarCesto() {
     listaCesto.replaceChildren();
+    const total = produtosSelecionados.reduce(function(soma, produto) {
+        return soma + Number(produto.price);
+    }, 0);
+
+    totalCesto.textContent = total.toLocaleString('pt-PT', {
+        style: 'currency',
+        currency: 'EUR'
+    });
 
     if (produtosSelecionados.length === 0) {
         mensagemCestoVazio.style.display = "block";
