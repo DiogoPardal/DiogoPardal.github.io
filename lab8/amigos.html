@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>API Amigos | Lab 8</title>
+        <link rel="stylesheet" href="../shared.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Explorar a API Amigos</h1>
+            <nav><ul><li><a href="index.html">Voltar à loja</a></li></ul></nav>
+        </header>
+        <main>
+            <section>
+                <h2>Pedido HTTP</h2>
+                <p>Consulta a documentação da API e indica o endpoint adequado para cada método.</p>
+                <form id="form-pedido">
+                    <label for="metodo">Método</label>
+                    <select id="metodo">
+                        <option>GET</option>
+                        <option>POST</option>
+                        <option>PUT</option>
+                        <option>DELETE</option>
+                    </select>
+                    <label for="endpoint">Endpoint</label>
+                    <input id="endpoint" type="text" placeholder="ex.: /amigos" required>
+                    <label for="corpo">Corpo JSON (POST/PUT)</label>
+                    <textarea id="corpo" rows="6" placeholder='{"nome":"Maria"}'></textarea>
+                    <button type="submit">Enviar pedido</button>
+                </form>
+                <h2>Resposta</h2>
+                <pre id="resposta-api" aria-live="polite">A resposta da API aparece aqui.</pre>
+            </section>
+        </main>
+        <script src="amigos.js"></script>
+    </body>
+</html>
